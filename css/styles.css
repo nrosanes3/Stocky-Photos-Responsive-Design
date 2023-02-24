@@ -1,0 +1,664 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+}
+
+.sr-only {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/****************** Typography ******************/
+h2:not(.banner-inner-container > h2) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.813rem, 2.93vw, 3.516rem);
+    line-height: 5.4rem;
+    color: #2c3e5b;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: clamp(2.25rem, 2.344vw, 2.813rem);
+    line-height: clamp(2.7rem, 4.5vw, 5.4rem);
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #fff;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/****************** Header ******************/
+.header-container {
+    background-color: #2c3e5b;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+div.logo svg{
+    width: 5rem;
+    fill: #acacab;
+}
+
+div.logo svg:hover,
+div.logo svg:active {
+    fill: #fff;
+}
+
+.hamburger {
+    width: 5rem;
+    padding: 0.25rem;
+    background-color: #2c3e5b;
+    border: none;
+}
+
+.hamburger svg {
+    fill: #acacab;
+}
+
+.hamburger svg:hover,
+.hamburger svg:active {
+    cursor: pointer;
+    fill: #fff;
+}
+
+header nav {
+    position: absolute;
+    top: 7.7rem;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.7s ease-in-out;
+    background-color: #fff;
+    border-bottom: none;
+}
+
+ul.nav-links li {
+    border-bottom: 1px solid #acacab;
+}
+
+ul.nav-links li:last-of-type {
+    border-bottom: none;
+}
+
+ul.nav-links li a {
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem 2rem;
+    font-size: 2.25rem;
+    line-height: 2.7rem;
+    color: #2c3e5b;
+}
+
+ul.nav-links li a:hover,
+ul.nav-links li a:active {
+    color: #fff;
+    background-color: #2c3e5b;
+}
+
+.show {
+    max-height: 40rem;
+    border-bottom: 3px solid #2c3e5b;
+}
+
+/****************** CSS Animation ******************/
+.header-container,
+.hamburger,
+header {
+    background-color: #2c3e5b;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example {
+    from {background-color: #2c3e5b;}
+    to {background-color: #798760;}
+  }
+
+  .slide-svg{
+    animation: 
+      pulse 3s ease infinite alternate, 
+      nudge 5s linear infinite alternate;
+    border-radius: 100%;
+  }
+
+  @keyframes nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    
+    50% {
+      transform: translate(150px, 0);
+    }
+    
+    80% {
+      transform: translate(-150px, 0);
+    }
+  }
+
+/****************** Banner Section ******************/
+section.banner {
+    background: url(../img/waterfall-sm.webp) center / cover no-repeat;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.banner-inner-container > h2 {
+    font-size: clamp(3.7rem, 7.15vw, 8.583rem);
+    line-height: clamp(5.4rem, 9vw, 10.8rem);
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.banner-inner-container > p:first-of-type {
+    font-family: 'Piazzolla', serif;
+    font-size: clamp(2.813rem, 3.67vw, 4.395rem);
+    line-height: 5.4rem;
+    color: #c9c8c0;
+}
+
+.banner-inner-container > p:last-of-type {
+    text-transform: uppercase;
+    font-size: clamp(1.44rem, 1.5vw, 1.8rem);
+    line-height: 2.7rem;
+}
+
+.banner-inner-container a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.banner-inner-container a:hover,
+.banner-inner-container a:active {
+    cursor: pointer;
+}
+
+input[type=search] {
+    width: 100%;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    background-image: url(../img/search-icon.svg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 30px 15px;
+    background-position: center left;
+    padding-left: 3rem;
+    font-size: 1.8rem;
+    line-height: 40px;
+}
+
+
+/****************** Services Section ******************/
+div.services {
+    padding: 3rem 2rem;
+}
+
+div.services svg g[id=camera],
+div.services svg g[id=money],
+div.services svg g[id=social] {
+    fill: #798760;
+}
+
+div.services a {
+    background-color: #2c3e5b;
+    text-decoration: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.services a:hover,
+div.services a:active {
+   cursor: pointer;
+   border: 3px solid #2c3e5b;
+}
+
+div.services article {
+    background-color: #2c3e5b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+div.services article:hover,
+div.services article:active {
+    border: 3px solid #2c3e5b;
+}
+
+div.services article h2 {
+    color: #f9f8f7;
+}
+
+div.services article > div:first-of-type {
+    background-color: #f9f8f7;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+div.services article > div:first-of-type svg {
+    width: 200px;
+}
+
+div.services article > div:last-of-type {
+    padding: 2rem;
+}
+
+
+/****************** Testimonials Section ******************/
+section.testimonials {
+    background-color: #f9f8f7;
+}
+
+.testimonials-inner-container {
+    padding: 5rem 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.testimonials h2 {
+    width: 100%;
+}
+
+section.testimonials p {
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+    color: #2c3e5b;
+    text-align: center;
+}
+
+
+/****************** Browse by Keyword Section ******************/
+.browse-inner-container a {
+    height: 100%;
+}
+
+.browse-inner-container a:hover {
+   opacity: .8;
+}
+
+.browse-inner-container a > div {
+    position: relative;
+    height: 100%;
+}
+
+.browse-inner-container a > div > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.browse-inner-container a > div picture img {
+    width: 100%;
+    height: 100%;
+}
+
+section.browse h2 {
+    padding: 5rem 2rem 3rem;
+}
+
+section.browse h3{
+    font-size: 3.516rem;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+section.browse p {
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+    color: #c9c8c0;
+    order: -1;
+}
+
+
+/****************** Statistics Section ******************/
+section.statistics {
+    background-color: #f9f8f7;
+    padding-bottom: 3rem;
+}
+
+.statistics-data-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.statistics-data-container > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+section.statistics h2 {
+    padding: 5rem 2rem 3rem 2rem;
+}
+
+section.statistics h3 {
+    font-size: clamp(1.8rem, 1.88vw,2.25rem);
+    line-height: 2.7rem;
+    color: #000;
+    font-weight: 400;
+}
+
+section.statistics p {
+    font-size: clamp(2.25rem, 2.34vw, 2.813rem);
+    font-weight: 700;
+    color: #000;
+    width: 100%;
+    margin: 0;
+    order: -1;
+}
+
+/****************** Footer ******************/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5rem 2rem 2rem 2rem;
+}
+
+footer p {
+    color: #2e2e2e;
+}
+
+@media screen and (min-width:450px) {
+    /****************** 450px Banner Section ******************/
+    input[type=search] {
+        width: 90%;
+    }
+
+    .banner-inner-container > h2 {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:600px) {
+    /****************** 600px Banner Section ******************/
+    section.banner {
+        text-align: left;
+        padding: 8rem 2rem;
+    }
+
+    input[type=search] {
+        width: 65%;
+    }
+
+    .banner-inner-container > p:first-of-type {
+        margin-bottom: 1rem;
+    }
+
+    /****************** 600px Typography ******************/
+    h2 {
+        text-align: left;
+    }
+
+    /****************** 600px Services Section ******************/
+    div.services {
+        padding: 0rem;
+    }
+
+    div.services article {
+        border: none;
+        border-radius: 0px;
+        margin: 0rem;
+        display: flex;
+    }
+
+    /****************** 600px Testimonials Section ******************/
+    .testimonials-inner-container {
+        display: grid;
+        grid-template-areas:
+            "heading profile"
+            "review profile"
+    }
+
+    section.testimonials h2 {
+        grid-area: heading;
+    }
+
+    .testimonials-inner-container > div {
+        grid-area: review;
+    }
+
+    section.testimonials picture {
+        grid-area: profile;
+    }
+
+    section.testimonials p {
+        text-align: left;
+        padding-right: 3rem;
+    }
+
+    /****************** 600px Browse by Keyword Section ******************/
+    .browse-inner-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /****************** 600px Statistics Section ******************/
+    .statistics-data-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width:730px) {
+    /****************** 730px Banner Section ******************/
+    section.banner {
+        background: url(../img/waterfall.webp) center / cover no-repeat;
+        padding: 10rem 2rem;
+    }
+    
+    /****************** 730px Services Section ******************/
+    div.services p {
+        width: 40rem;
+    }
+
+    div.services article > div:first-of-type {
+        width: 40%;
+        padding: 2rem 5rem;
+    }
+
+    /****************** 730px Testimonials Section ******************/
+    .testimonials-inner-container {
+        display: grid;
+        grid-template-areas:
+            "heading profile"
+            "review profile"
+            "empty profile"
+        
+    }
+}
+
+@media screen and (min-width:950px){
+    /****************** 950px Header ******************/
+    header {
+        background-color: #2c3e5b;
+    }
+    .header-inner-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+       display: none;
+    }
+    
+    header nav {
+        padding: 0 2rem;
+
+        position: unset;
+        top: unset;
+        width: unset;
+        max-height: 80rem;
+        overflow: hidden;
+        transition: none;
+        background-color: unset;
+        border-bottom: none;
+    }
+
+    ul.nav-links {
+        display: flex;
+    }
+
+    ul.nav-links li {
+        border-bottom: none;
+    }
+
+    ul.nav-links li a {
+        display: unset;
+        padding: 1.5rem 1rem;
+        color: #fff;
+    }
+
+    ul.nav-links li a:hover,
+    ul.nav-links li a:active {
+        color: #acacab;
+        text-decoration: underline;
+    }
+    
+    /****************** 950px Banner Section ******************/
+    section.banner {
+        padding: 20rem 2rem 10rem;
+    }
+
+    input[type=search] {
+        width: 53%;
+    }
+
+    /****************** 950px Testimonials Section ******************/
+    .testimonials-inner-container > div {
+        width: 60%;
+        padding-bottom: 10rem;
+    }
+
+    .testimonials-inner-container {
+        position: relative;
+    }
+
+    .testimonials-inner-container picture {
+        position:absolute;
+        max-width: unset;
+        left: -30rem;
+    }
+
+    /****************** 950px Services Section ******************/
+    div.services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 2rem;
+        padding: 4rem 2rem;
+    }
+
+    div.services article {
+        flex-wrap: wrap;
+    }
+
+    div.services article > div:first-of-type svg {
+        width: auto;
+    }
+
+    div.services article > div:first-of-type {
+        width: 100%;
+        padding: 2rem 7rem;
+    }
+
+    div.services article > div:last-of-type {
+        padding-bottom: 4rem;
+    }
+
+    div.services p {
+        width: unset;
+    }
+
+
+    /****************** 950px Browse by Keyword Section ******************/
+    .browse-inner-container {
+        display: grid;
+        width: 100%;
+        grid-template-areas: 
+            "browse browse browse browse"
+            "browse browse browse browse"
+            "browse1 browse1 browse2 browse2";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto 33.3%;
+        background-color: greenyellow;
+    }
+
+    .browse-inner-container a:nth-last-of-type(2){
+        grid-area: browse1;
+    }
+
+    .browse-inner-container a:last-of-type {
+       grid-area: browse2;
+    }
+
+}
+
+@media screen and (min-width:1100px) {
+    .statistics-data-container {
+        width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    /****************** 1200px Banner Section ******************/
+    .banner-inner-container,
+    div.services,
+    .header-inner-container,
+    section.browse h2,
+    section.statistics h2,
+    footer {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    /****************** 1200px Browse Section ******************/
+    .browse-inner-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    .browse-inner-container a:nth-last-of-type(2){
+        grid-area: unset;
+    }
+
+    .browse-inner-container a:last-of-type {
+       grid-area: unset;
+    }
+
+    /****************** 1200px Statistics Section ******************/
+    .statistics-data-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
